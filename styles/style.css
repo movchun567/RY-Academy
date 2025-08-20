@@ -6,8 +6,8 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 24px;
-  }
-  
+}
+
 
 .logo {
     color: #fff;
@@ -15,7 +15,7 @@ body {
     font-weight: bold;
     text-decoration: underline;
     text-decoration-color: #17c2ec;
-    text-underline-offset: 6px; 
+    text-underline-offset: 6px;
 }
 
 .navigation {
@@ -30,7 +30,7 @@ body {
     list-style: none;
     gap: 2rem;
 }
-  
+
 .navigation nav ul li {
     font-size: 24px;
     color: #fff;
@@ -38,7 +38,7 @@ body {
 
 .home-link {
     position: relative;
-    font-weight: bold;    
+    font-weight: bold;
 }
 
 .home-link .dot {
@@ -72,7 +72,15 @@ body {
     display: flex;
     flex-direction: row;
     gap: 150px;
-    
+}
+
+@media (max-width: 768px) {
+    .banner-items {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+    }
 }
 
 
@@ -180,14 +188,14 @@ body {
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    
+
 }
 
-.banner-image-spec {  
+.banner-image-spec {
     width: 70px;
     height: 70px;
     border-radius: 10px;
-    
+
 }
 
 .banner-image-text {
@@ -220,7 +228,7 @@ body {
     width: 30px;
     height: 30px;
     flex-shrink: 0;
-    
+
 }
 
 .banner-schedule-title p {
@@ -241,6 +249,16 @@ body {
     border-radius: 20px 20px 0 0;
     padding: 30px 40px 30px 40px;
     width: 95%;
+
+}
+
+@media (max-width: 768px) {
+    .banner-schedule-info {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 20px;
+    }
 
 }
 
@@ -307,6 +325,12 @@ body {
     margin-right: calc(-50vw + 50%);
 }
 
+@media (max-width: 480px) {
+    .sponsors {
+        display: none;
+    }
+}
+
 .sponsors img {
     width: auto;
     height: auto;
@@ -317,6 +341,12 @@ body {
 .check {
     padding: 1.5rem 5%;
     margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+    .check {
+        display: none;
+    }
 }
 
 .check-container {
@@ -332,7 +362,7 @@ body {
 
 .check-container-title {
     color: #fff;
-    background: rgba(255, 255, 255, 0.1);;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 20px 20px 0 0;
     margin: 0;
     width: 100%;
@@ -351,7 +381,15 @@ body {
     gap: 20px;
     width: 90%;
     justify-content: space-between;
-    
+}
+
+@media (max-width: 768px) {
+    .check-container-info {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
 }
 
 .check-container-info-input {
@@ -415,6 +453,15 @@ body {
     padding: 3rem 5%;
 }
 
+@media (max-width: 768px) {
+    .reasons-title {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: flex-start;
+    }
+}
+
 .reasons-title-text {
     color: #fff;
     font-size: 48px;
@@ -443,13 +490,23 @@ body {
     margin-bottom: 50px;
 }
 
+@media (max-width: 768px) {
+    .reasons-info {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+
+}
+
 .reasons-info-protect {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px 50px 20px 20px;
+    border-radius: 20px 70px 20px 20px;
     padding: 30px;
     width: 350px;
 }
@@ -483,6 +540,7 @@ body {
     width: 200px;
     height: 200px;
 }
+
 .reasons-info-page img {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
@@ -501,13 +559,22 @@ body {
 }
 
 
-.registration  {
+.registration {
     background-image: url(../images/background2.jpg);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
     gap: 100px;
+}
+
+@media (max-width: 768px) {
+    .registration {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+    }
 }
 
 .reg-container {
@@ -613,6 +680,15 @@ body {
     gap: 12px;
 }
 
+@media (max-width: 480px) {
+    .reg-form-num {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
 .reg-phone-box {
     display: flex;
     align-items: center;
@@ -625,7 +701,7 @@ body {
 .reg-flag {
     width: 24px;
     height: 16px;
-    
+
 }
 
 .divider {
@@ -665,7 +741,7 @@ body {
     height: 100%;
     object-fit: contain;
     border-radius: 20px;
-    transform: translate(-170px, -150px);
+    transform: translate(-170px, -100px);
 }
 
 .reg-image-texts {
@@ -679,11 +755,11 @@ body {
 .reg-image-text {
     color: #fff;
     font-size: 1.5em;
-    transform: translate(30px, -350px);
+    transform: translate(30px, -220px);
 }
 
 .reg-image-btn {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     padding: 10px 25px;
     color: #fff;
@@ -724,11 +800,22 @@ body {
     background-repeat: repeat-x;
     background-color: #fff;
     background-size: calc(100% / 3) auto;
-    
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .feedback {
+        background-image: url(../images/bottle-mobile.png);
+        background-repeat: repeat-y;
+        background-size: cover;
+        background-size: calc(100% / 3) auto;
+        background-color: #fff;
+
+    }
 }
 
 .feedback-title {
@@ -759,6 +846,15 @@ body {
     padding: 1.5rem 5%;
 }
 
+@media (max-width: 768px) {
+    .customer-feedbacks {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
 .feedback-card {
     display: flex;
     flex-direction: column;
@@ -773,7 +869,7 @@ body {
 .feedback-text {
     color: black;
     font-size: 18px;
-    
+
 }
 
 .feedback-text-special {
@@ -781,7 +877,7 @@ body {
     font-size: 18px;
 }
 
-.feedback-card-special{
+.feedback-card-special {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -800,7 +896,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    
+
 }
 
 .customer-image {
@@ -901,12 +997,30 @@ body {
     padding: 1.5rem 5%;
 }
 
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+
 .footer nav ul {
     display: flex;
     list-style: none;
     gap: 2rem;
 }
-  
+
+@media (max-width: 480px) {
+    .footer nav ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 .footer nav ul li {
     color: #fff;
 }
