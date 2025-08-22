@@ -52,7 +52,7 @@ input {
     flex-direction: column;
     gap: 12px;
     padding: 16px;
-    list-style: none;  /* removes default bullets */
+    list-style: none;
     margin: 0;
 }
 
@@ -112,4 +112,5 @@ input {
     background-color: #393433;
     color: #F9F5F4;
     font-size: 18px;
+    cursor: pointer;
 }
