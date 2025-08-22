@@ -67,6 +67,24 @@ input {
     gap: 12px;
 }
 
+.task.completed .task-name {
+    opacity: 40%;
+}
+
+.task.completed {
+    border: #0000001A solid 1px;
+}
+
+.task.completed .checkbox {
+    background-color: #393433;
+    opacity: 0.5;
+    border: none;
+    background-image: url("../images/checked.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
 .checkbox {
     height: 24px;
     width: 24px;
@@ -76,6 +94,7 @@ input {
     box-sizing: border-box;
     margin-top: 15px;
     margin-left: 15px;
+    cursor: pointer;
 }
 
 .task-name {

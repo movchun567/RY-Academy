@@ -16,6 +16,7 @@ function addTask() {
         ul.appendChild(li);
         input.value = "";
         addDragEvents(li);
+        addCheckboxEvent(li);
     }
 }
 
@@ -63,3 +64,11 @@ function getDragAfterElement(container, y) {
 
 document.querySelectorAll('.task').forEach(addDragEvents);
 
+function addCheckboxEvent(task) {
+    const checkbox = task.querySelector('.checkbox');
+    checkbox.addEventListener('click', () => {
+        task.classList.toggle('completed');
+    });
+}
+
+document.querySelectorAll('.task').forEach(addCheckboxEvent);
