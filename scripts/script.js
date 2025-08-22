@@ -1,22 +1,30 @@
+
 document.querySelector('.add-task-btn').addEventListener('click', addTask);
+
+function createTask(text, completed = false) {
+    const li = document.createElement('li');
+    li.className = 'task dynamic';
+    li.setAttribute('draggable', 'true');
+    if (completed) li.classList.add('completed');
+    li.innerHTML = `
+        <div class="checkbox"></div>
+        <p class="task-name">${text}</p>
+    `;
+    addDragEvents(li);
+    addCheckboxEvent(li);
+    return li;
+}
 
 function addTask() {
     const input = document.querySelector('.add-task-input');
     const taskText = input.value.trim();
     if (taskText !== "") {
-        const lastCategory = document.querySelectorAll('.category-tasks');
-        const ul = lastCategory[lastCategory.length - 1];
-        const li = document.createElement('li');
-        li.className = 'task';
-        li.setAttribute('draggable', 'true');
-        li.innerHTML = `
-            <div class="checkbox"></div>
-            <p class="task-name">${taskText}</p>
-        `;
+        const categories = document.querySelectorAll('.category-tasks');
+        const ul = categories[categories.length - 1];
+        const li = createTask(taskText);
         ul.appendChild(li);
         input.value = "";
-        addDragEvents(li);
-        addCheckboxEvent(li);
+        saveTasks();
     }
 }
 
@@ -25,12 +33,13 @@ function addDragEvents(item) {
     item.addEventListener('dragend', dragEnd);
 }
 
-function dragStart(e) {
+function dragStart() {
     this.classList.add('dragging');
 }
 
-function dragEnd(e) {
+function dragEnd() {
     this.classList.remove('dragging');
+    saveTasks();
 }
 
 const lists = document.querySelectorAll('.category-tasks');
@@ -68,7 +77,52 @@ function addCheckboxEvent(task) {
     const checkbox = task.querySelector('.checkbox');
     checkbox.addEventListener('click', () => {
         task.classList.toggle('completed');
+        saveTasks();
     });
 }
 
 document.querySelectorAll('.task').forEach(addCheckboxEvent);
+
+function saveTasks() {
+    const categories = document.querySelectorAll('.category-tasks');
+    const data = {};
+    categories.forEach(cat => {
+        const catId = cat.id;
+        const tasks = [];
+        const seen = new Set();
+        cat.querySelectorAll('.task').forEach(task => {
+            const text = task.querySelector('.task-name').textContent;
+            if (seen.has(text)) return;
+            seen.add(text);
+            const completed = task.classList.contains('completed');
+            tasks.push({
+                text: text,
+                completed: completed,
+                dynamic: task.classList.contains('dynamic')
+            });
+        });
+        data[catId] = tasks;
+    });
+    localStorage.setItem('tasks', JSON.stringify(data));
+}
+
+function loadTasks() {
+    const data = JSON.parse(localStorage.getItem('tasks') || '{}');
+    Object.keys(data).forEach(catId => {
+        const cat = document.getElementById(catId);
+        if (!cat) return;
+        data[catId].forEach(taskData => {
+            if (taskData.dynamic) {
+                const li = createTask(taskData.text, taskData.completed);
+                cat.appendChild(li);
+            } else {
+                const li = [...cat.querySelectorAll('.task')].find(
+                    t => t.querySelector('.task-name').textContent === taskData.text
+                );
+                if (li && taskData.completed) li.classList.add('completed');
+            }
+        });
+    });
+}
+
+loadTasks();
