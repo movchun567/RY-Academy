@@ -5,50 +5,68 @@
     <title>To-Do List</title>
     <link rel="stylesheet" href="../styles/todolist.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    
     <body>
-        <div class="page">
-            <div class="info">
-                <h1 class="title">
-                    ToDo Manager
-                </h1>
-                <h2 class="subtitle">Click on task and press "-" key to delete it
-                    <br>
-                    Click on task and press "e" key to edit it. After editing press "Enter" to save changes
-                </h2>
+        <div class="app">
+            <div class="sidebar">
+                <nav class="sidebar-nav">
+                    <a href="../template/todolist.html" class="sidebar-link">ToDo</a>
+                    <a href="#" class="sidebar-link">Analytics</a>
+                    <a href="#" class="sidebar-link">People</a>
+                    <a href="#" class="sidebar-link">Products</a>
+                    <a href="#" class="sidebar-link">Settings</a>
+                </nav>
             </div>
-            <div class="category">
-                <h2 class="category-name">DESIGN</h2>
-                <ul class="category-tasks" id="design">
-                    
-                </ul>
-            </div>
-            <div class="category">
-                <h2 class="category-name">PERSONAL</h2>
-                <ul class="category-tasks" id="personal">
-                    
-                </ul>
-            </div>
-            <div class="category">
-                <h2 class="category-name">HOUSE</h2>
-                <ul class="category-tasks" id="house">
-                    
-                </ul>
-            </div>
-            <div class="task-operations">
-                <div class="add-task">
-                    <input class="add-task-input" placeholder="Write a task...">
-                    <button class="add-task-btn">Add</button>
+            <div class="page">
+                <div class="topbar">
+                    <input class="topbar-search"placeholder="Search"></input>
+                    <button class="dark-mode-btn">Night mode</button>
+                    <button class="logout-btn">Logout</button>
                 </div>
-                <div class="task-filter">
-                    <select class="filter-select" aria-label="Filter tasks">
-                        <option value="all">All tasks</option>
-                        <option value="incompleted">Incompleted</option>
-                        <option value="completed">Completed</option>
-                    </select>
+                <div class="container">
+                    <div class="info">
+                        <h1 class="title">
+                            ToDo Manager
+                        </h1>
+                        <h2 class="subtitle">Click on task and press "-" key to delete it
+                            <br>
+                            Click on task and press "e" key to edit it. After editing press "Enter" to save changes
+                        </h2>
+                    </div>
+                    <div class="category">
+                        <h2 class="category-name">DESIGN</h2>
+                        <ul class="category-tasks" id="design">
+                            
+                        </ul>
+                    </div>
+                    <div class="category">
+                        <h2 class="category-name">PERSONAL</h2>
+                        <ul class="category-tasks" id="personal">
+                            
+                        </ul>
+                    </div>
+                    <div class="category">
+                        <h2 class="category-name">HOUSE</h2>
+                        <ul class="category-tasks" id="house">
+                            
+                        </ul>
+                    </div>
+                    <div class="task-operations">
+                        <div class="add-task">
+                            <input class="add-task-input" placeholder="Write a task...">
+                            <button class="add-task-btn">Add</button>
+                        </div>
+                        <div class="task-filter">
+                            <select class="filter-select" aria-label="Filter tasks">
+                                <option value="all">All tasks</option>
+                                <option value="incompleted">Incompleted</option>
+                                <option value="completed">Completed</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <script src="../scripts/todolist.js"></script>
+        <script src="../scripts/globalactions.js"></script>
     </body>
 </html>
