@@ -1,5 +1,5 @@
 async function fetchData() {
-    const response = await fetch('https://file.notion.so/f/f/fc1aed7d-0edf-4ccc-8851-423db35cabfe/fbd02ded-9ea5-4ab6-8866-cf4f17b32f18/sales_february_2025.json?table=block&id=25aa2ac6-bc6d-806d-903b-f7d7b46f221d&spaceId=fc1aed7d-0edf-4ccc-8851-423db35cabfe&expirationTimestamp=1756512000000&signature=H-lWgltV6ub3wd1EN9JkDSB7H7e7xRVB_Q0jNrpunIE&downloadName=sales_february_2025.json');
+    const response = await fetch('sales_february_2025.json');
     if (!response.ok) throw new Error('Failed to load JSON file');
     return await response.json();
 }
