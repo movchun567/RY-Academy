@@ -21,12 +21,12 @@ async function renderCharts() {
                 label: 'Produce Sales',
                 data: amountData,
                 fill: false,
-                borderColor: '#000000',
-                backgroundColor: '#000000',
+                borderColor: 'red',
+                backgroundColor: 'red',
                 tension: 0.3,
                 pointRadius: 5,
                 pointBackgroundColor: 'white',
-                pointBorderColor: '#000000',
+                pointBorderColor: 'red',
                 pointHoverRadius: 7
             }]
         },
@@ -52,8 +52,8 @@ async function renderCharts() {
             datasets: [{
                 label: 'Lead Count',
                 data: leadData,
-                backgroundColor: '#000000',
-                borderColor: '#000000',
+                backgroundColor: 'red',
+                borderColor: 'red',
                 borderWidth: 1
             }]
         },
@@ -109,12 +109,12 @@ async function renderCharts() {
                 label: 'Revenue by Month',
                 data: monthData,
                 fill: false,
-                borderColor: '#000000',
-                backgroundColor: '#000000',
+                borderColor: 'red',
+                backgroundColor: 'red',
                 tension: 0.3,
                 pointRadius: 5,
                 pointBackgroundColor: 'white',
-                pointBorderColor: '#000000',
+                pointBorderColor: 'red',
                 pointHoverRadius: 7
             }]
         },
