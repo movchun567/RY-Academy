@@ -1,0 +1,136 @@
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    padding-left: 12px;
+}
+
+.app {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.sidebar {
+    width: 160px;
+    background-color: #F3EFEE;
+    color: #121212;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    border-right: 1px solid #9F9F9F;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.sidebar-link {
+    color: #121212;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.page {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.topbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 16px 24px;
+    background-color: #F3EFEE;
+    gap: 12px;
+    border-bottom: 1px solid #9F9F9F;
+}
+
+.topbar-search {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #9F9F9F;
+    width: 200px;
+}
+
+.dark-mode-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #393433;
+    color: #fff;
+}
+
+.logout-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #393433;
+    color: #fff;
+}
+
+.container {
+    flex-grow: 1;
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+    padding-top: 56px;
+    padding-left: 22px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: center;
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+.title {
+    padding: 16px;
+    font-size: 36px;
+    font-weight: 600;
+    gap: 10px;
+}
+
+.graphics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.chart-container {
+    position: relative;
+    height: 400px;
+    width: 600px;
+    margin-bottom: 20px;
+}
+
+.tables {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding: 20px;
+}

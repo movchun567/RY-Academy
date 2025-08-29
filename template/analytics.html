@@ -2,9 +2,10 @@
 <html lang="en">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>People</title>
-    <link rel="stylesheet" href="../styles/people.css">
+    <title>Analytics</title>
+    <link rel="stylesheet" href="../styles/analytics.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <body>
         <div class="app">
             <div class="sidebar">
@@ -25,14 +26,24 @@
                 <div class="container">
                     <div class="info">
                         <h1 class="title">
-                            People
+                            Analytics
                         </h1>
                     </div>
-                    <div class="people-list">
+                    <div class="graphics">
+                        <div class="chart-container"><canvas class="chart1" width="600" height="400"></canvas></div>
+                        <div class="chart-container"><canvas class="chart2" width="600" height="400"></canvas></div>
+                        <div class="chart-container"><canvas class="chart3" width="600" height="400"></canvas></div>
+                        <div class="chart-container"><canvas class="chart4" width="600" height="400"></canvas></div>
+                        <div class="chart-container"><canvas class="chart5" width="600" height="400"></canvas></div>
+                    </div>
+                    <div class="tables">
+                        <div class="manager-table"></div>
+                        <div class="product-table"></div>
                     </div>
             </div>
         </div>
-        <script src="../scripts/people.js"></script>
+        
+        <script src="../scripts/analytics.js"></script>
         <script src="../scripts/globalactions.js"></script>
     </body>
 </html>
