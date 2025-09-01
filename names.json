@@ -1,0 +1,13 @@
+[
+    {"id": 1, "name": "John Doe", "access_right": "admin", "password": "89e01536ac207279409d4de1e5253e01f4a1769e696db0d6062ca9b8f56767c8"},
+    {"id": 2, "name": "Jane Smith", "access_right": "user", "password": "89e01536ac207279409d4de1e5253e01f4a1769e696db0d6062ca9b8f56767c8"},
+    {"id": 3, "name": "Mike Johnson", "access_right": "user", "password": "89e01536ac207279409d4de1e5253e01f4a1769e696db0d6062ca9b8f56767c8"},
+    {"id": 4, "name": "Alice Brown", "access_right": "user", "password": "89e01536ac207279409d4de1e5253e01f4a1769e696db0d6062ca9b8f56767c8"},
+    {"id": 5, "name": "Tom Lee", "access_right": "admin", "password": "89e01536ac207279409d4de1e5253e01f4a1769e696db0d6062ca9b8f56767c8"},
+    {"id": 6, "name": "Emma Davis", "access_right": "user", "password": "89e01536ac207279409d4de1e5253e01f4a1769e696db0d6062ca9b8f56767c8"},
+    {"id": 7, "name": "Chris Wilson", "access_right": "user", "password": "89e01536ac207279409d4de1e5253e01f4a1769e696db0d6062ca9b8f56767c8"},
+    {"id": 8, "name": "Sophia Taylor", "access_right": "user", "password": "89e01536ac207279409d4de1e5253e01f4a1769e696db0d6062ca9b8f56767c8"},
+    {"id": 9, "name": "Daniel White", "access_right": "user", "password": "89e01536ac207279409d4de1e5253e01f4a1769e696db0d6062ca9b8f56767c8"},
+    {"id": 10, "name": "Olivia Harris", "access_right": "admin", "password": "89e01536ac207279409d4de1e5253e01f4a1769e696db0d6062ca9b8f56767c8"}
+   ]
+   
